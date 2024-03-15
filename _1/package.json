@@ -1,0 +1,20 @@
+{
+  "name": "_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server_time.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
