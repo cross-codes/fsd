@@ -38,3 +38,12 @@ The HTTP server may be started using the command:
 ```bash
 npm run start
 ```
+
+---
+
+## Chapter 2: A few more words: Advanced Node and NPM
+
+There are no files meant to be executed here. The code merely
+explores some features of Node's API, and is only meant for perusal.
+
+---
