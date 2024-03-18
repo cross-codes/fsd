@@ -21,7 +21,7 @@ const request = http.request(
   {
     hostname: "www.some_remote_system.com",
     port: 80,
-    path: "/somAPI",
+    path: "/someAPI",
     method: "POST",
   },
   function(inResponse) {
