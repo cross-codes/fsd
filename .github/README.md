@@ -1,6 +1,6 @@
 <div align="center">
 
- <h4>Modern Full-Stack Development</h4>
+ <h2>Modern Full-Stack Development</h2>
 
 </div>
 
