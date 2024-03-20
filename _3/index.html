@@ -10,7 +10,33 @@
     <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
     <script>
       function start() {
-        // React.createElement(type, {props}, ...children)
+        class Bookmark extends React.Component {
+          constructor(props) {
+            super(props);
+            console.log("Bookmark component created");
+          }
+          title = this.props.title;
+          titleStyle = { color: "red" };
+          render() {
+            return React.createElement(
+              "li",
+              {},
+              React.createElement("h2", { style: this.titleStyle }, this.title),
+              React.createElement("a", { href: this.props.href }, this.props.description),
+              React.createElement(
+                "button",
+                {
+                  onClick: function () {
+                    this.title = this.title + "-CHANGED";
+                    this.setState({});
+                  },
+                },
+                "Click Me",
+              ),
+            );
+          }
+        }
+
         const topMostComponent = React.createElement(
           "div",
           {},
@@ -18,18 +44,16 @@
           React.createElement(
             "ul",
             {},
-            React.createElement(
-              "li",
-              {},
-              React.createElement("h2", {}, "Etherient"),
-              React.createElement("a", { href: "https://www.etherient.com" }, "The home page of Etherient"),
-            ),
-            React.createElement(
-              "li",
-              {},
-              React.createElement("h2", {}, "Frank's Home"),
-              React.createElement("a", { href: "https://www.zammetti.com" }, "The web home page of Frank Zammetti"),
-            ),
+            React.createElement(Bookmark, {
+              title: "Etherient",
+              href: "https://www.etherient.com",
+              description: "The home page of Etherient",
+            }),
+            React.createElement(Bookmark, {
+              title: "Frank's site",
+              href: "https://www.zammetti.com",
+              description: "The web home of Frank Zammetti",
+            }),
           ),
         );
         const root = ReactDOM.createRoot(document.getElementById("mainContainer"));
